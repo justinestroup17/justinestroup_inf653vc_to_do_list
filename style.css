@@ -1,0 +1,11 @@
+body {
+    background: lavender;
+    padding: 10px;
+    text-align: center;
+}
+.title {
+    font-style: italic;
+}
+#tasks {
+    background: white;
+}
