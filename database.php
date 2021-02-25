@@ -1,11 +1,11 @@
 <?php
     $dsn = 'mysql:host=localhost;dbname=todolist';
     $username = 'root';
-    $password = '';
+    //$password = ''; commented out to allow access for class purposes
 
     try
     {
-        $db = new PDO($dsn, $username, $password);
+        $db = new PDO($dsn, $username);
     }
     catch (PDOException $e)
     {

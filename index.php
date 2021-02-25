@@ -18,11 +18,11 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header><h1 class="title">My To Do List</h1></header>
+    <header><h1>My To Do List</h1></header>
     <main>
     <!-- Show today's tasks -->
     <section>
-        <h2 id="tasks" class="title">Today's Tasks:</h2>
+        <h2 id="tasks" class="italics">Today's Tasks:</h2>
         <?php foreach ($todoitems as $todoitem) : ?>
         <ul>
             <li><?php echo $todoitem['title']; ?></li>
@@ -31,8 +31,8 @@
         <?php endforeach; ?>
     </section>
     <!-- Add new item -->
-    <section>
-        <h2 id="tasks" class="title">Add new task:</h2>
+    <aside>
+        <h2 id="tasks" class="italics">Add new task:</h2>
         <form action="index.php" method="post">
             <label for="newtitle">Task:</label><br>
             <input type="text" id="newtitle" name="title" required><br>
@@ -41,7 +41,7 @@
             <button>Add</button>
         </form>
         <?php include_once('index.php'); ?>
-    </section>
+    </aside>
     <footer>
     <p>Justine Stroup INF 653 VC</p>
     </footer>
