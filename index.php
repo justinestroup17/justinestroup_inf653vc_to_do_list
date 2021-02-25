@@ -20,16 +20,21 @@
 <body>
     <header><h1>My To Do List</h1></header>
     <main>
-    <!-- Show today's tasks -->
-    <section>
-        <h2 id="tasks" class="italics">Today's Tasks:</h2>
-        <?php foreach ($todoitems as $todoitem) : ?>
-        <ul>
-            <li><?php echo $todoitem['title']; ?></li>
-            <p><?php echo $todoitem['description']; ?></p>
-        </ul>
-        <?php endforeach; ?>
-    </section>
+        <!-- If no items in todolist, display message, otherwise display items -->
+        <?php if(empty($todoitems)) { ?>
+            <p>No tasks yet, get to it!!</p>
+        <?php } else { ?>
+            <!-- Show today's tasks -->
+            <section>
+                <h2 id="tasks" class="italics">Today's Tasks:</h2>
+                <?php foreach ($todoitems as $todoitem) : ?>
+                <ul>
+                    <li><?php echo $todoitem['title']; ?></li>
+                    <p><?php echo $todoitem['description']; ?></p>
+                </ul>
+                <?php endforeach; ?>
+                </section>
+        <?php } ?>
     <!-- Add new item -->
     <aside>
         <h2 id="tasks" class="italics">Add new task:</h2>

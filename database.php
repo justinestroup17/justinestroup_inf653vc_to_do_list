@@ -11,6 +11,7 @@
     {
         $error_message = 'Database Error: ';
         $error_message .= $e->getMessage();
+        include('database_error.php');
         echo $error_message;
         exit();
     }
