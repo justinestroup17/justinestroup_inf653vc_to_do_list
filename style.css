@@ -1,11 +1,12 @@
 body {
-    background: lavender;
-    padding: 10px;
+    background: rgb(78, 78, 134);
     text-align: center;
 }
 .title {
     font-style: italic;
 }
 #tasks {
-    background: white;
+    background: rgb(17, 115, 128);
+    border-style: solid;
+    padding: 1%;
 }

@@ -21,8 +21,8 @@
     <header><h1 class="title">My To Do List</h1></header>
     <main>
     <!-- Show today's tasks -->
-    <section id="tasks">
-        <h2 class="title">Today's Tasks:</h2>
+    <section>
+        <h2 id="tasks" class="title">Today's Tasks:</h2>
         <?php foreach ($todoitems as $todoitem) : ?>
         <ul>
             <li><?php echo $todoitem['title']; ?></li>
@@ -32,7 +32,7 @@
     </section>
     <!-- Add new item -->
     <section>
-        <h2 class="title">Add new task:</h2>
+        <h2 id="tasks" class="title">Add new task:</h2>
         <form action="index.php" method="post">
             <label for="newtitle">Task:</label><br>
             <input type="text" id="newtitle" name="title" required><br>
@@ -42,6 +42,9 @@
         </form>
         <?php include_once('index.php'); ?>
     </section>
+    <footer>
+    <p>Justine Stroup INF 653 VC</p>
+    </footer>
     </main>
 </body>
 </html>
