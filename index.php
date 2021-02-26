@@ -20,33 +20,33 @@
 <body>
     <header><h1>My To Do List</h1></header>
     <main>
-        <!-- If no items in todolist, display message, otherwise display items -->
-        <?php if(empty($todoitems)) { ?>
-            <p>No tasks yet, get to it!!</p>
-        <?php } else { ?>
-            <!-- Show today's tasks -->
-            <section>
-                <h2 id="tasks" class="italics">Today's Tasks:</h2>
+        <!-- Show today's tasks -->
+        <section>
+            <h2 id="tasks" class="italics">Today's Tasks:</h2>
+            <!-- If no items in todolist, display message, otherwise display items -->
+            <?php if(empty($todoitems)) { ?>
+                <p>No tasks yet, get to it!!</p>
+            <?php } else { ?>
                 <?php foreach ($todoitems as $todoitem) : ?>
                 <ul>
-                    <li><?php echo $todoitem['title']; ?></li>
-                    <p><?php echo $todoitem['description']; ?></p>
+                    <li id=divleft><?php echo $todoitem['title']; ?></li>
+                    <p id=divleft><?php echo $todoitem['description']; ?></p>
                 </ul>
                 <?php endforeach; ?>
-                </section>
+        </section>
         <?php } ?>
     <!-- Add new item -->
-    <aside>
+    <section>
         <h2 id="tasks" class="italics">Add new task:</h2>
         <form action="index.php" method="post">
-            <label for="newtitle">Task:</label><br>
+            <label for="newtitle"><strong>Task:</strong></label><br>
             <input type="text" id="newtitle" name="title" required><br>
-            <label for="description">Description:</label><br>
-            <input type="text" id="description" name="description"><br>
-            <button>Add</button>
+            <label for="description"><strong>Description:</strong></label><br>
+            <input type="text" id="description" name="description"><br><br>
+            <button id="add">Add</button>
         </form>
         <?php include_once('index.php'); ?>
-    </aside>
+    </section>
     <footer>
     <p>Justine Stroup INF 653 VC</p>
     </footer>

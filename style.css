@@ -5,9 +5,21 @@ body {
 footer {
     text-align: right;
 }
-header {
+#divleft {
+    float: left;
+}
+.caps {
     text-transform: capitalize !important;
 }
+#add {
+    background-color: rgb(17, 115, 128);
+    border: solid;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
 .italics {
     font-style: italic;
 }
